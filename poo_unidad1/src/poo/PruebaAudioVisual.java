@@ -39,18 +39,34 @@ public class PruebaAudioVisual {
         documental.agregarInvestigador(
                 new Investigador("Neil", "Tyson",
                         "Astrofisica", "American Museum"));
+        
+        Videopodcast videopodcast = new Videopodcast(
+                "Charlas de Tecnología",
+                40,
+                "Tecnología",
+                "Carlos Pérez",
+                "YouTube",
+                25);
 
-        // Crear arreglo de contenidos audiovisuales
-        ContenidoAudiovisual[] contenidos =
-                new ContenidoAudiovisual[3];
+            Videojuegos videojuego = new Videojuegos(
+                "Minecraft",
+                120,
+                "Aventura",
+                "Mojang",
+                "PC",
+                "Multijugador");
 
-        contenidos[0] = pelicula;
-        contenidos[1] = serie;
-        contenidos[2] = documental;
+            ContenidoAudiovisual[] contenidos =
+                new ContenidoAudiovisual[5];
 
-        // Mostrar detalles
-        for (ContenidoAudiovisual contenido : contenidos) {
-            contenido.mostrarDetalles();
+            contenidos[0] = pelicula;
+            contenidos[1] = serie;
+            contenidos[2] = documental;
+            contenidos[3] = videopodcast;
+            contenidos[4] = videojuego;
+
+            for (ContenidoAudiovisual contenido : contenidos) {
+                contenido.mostrarDetalles();
+            }
         }
     }
-}
